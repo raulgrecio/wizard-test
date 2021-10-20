@@ -4,6 +4,13 @@ Code test for Web. With **Typecript**, **Redux**, **Sagas**, **Redux-Toolkit**, 
 
 This project was bootstrapped with Create React App. For more information see the [next section](./more_info/CREATE_REACT_APP.md)
 
+| web                                                                                 | response                                                                                |
+| ----------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| <img src="./promo/home.png" data-canonical-src="./promo/home.png" height="460" />   | <img src="./promo/home_r.png" data-canonical-src="./promo/home_r.png" height="460" />   |
+| <img src="./promo/step1.png" data-canonical-src="./promo/step1.png" height="460" /> | <img src="./promo/step1_r.png" data-canonical-src="./promo/step1_r.png" height="460" /> |
+| <img src="./promo/step2.png" data-canonical-src="./promo/step2.png" height="460" /> | <img src="./promo/step2_r.png" data-canonical-src="./promo/step2_r.png" height="460" /> |
+| <img src="./promo/step3.png" data-canonical-src="./promo/step3.png" height="460" /> | <img src="./promo/step3_r.png" data-canonical-src="./promo/step3_r.png" height="460" /> |
+
 ---
 
 ## Project Info
