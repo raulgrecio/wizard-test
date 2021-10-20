@@ -1,0 +1,42 @@
+///////////////////////////////////////////////////////////////////////////////
+///  colors base                                                            ///
+///////////////////////////////////////////////////////////////////////////////
+
+$primary-color: #ff0049;
+$secondary-color: #002b45;
+$terciary-color: #fff1e5;
+$secondary-color-alt: #00c6e0;
+$primary-color-alt: #db1c7e;
+$terciary-color-alt: #d0cebd;
+
+$white: #ffffff;
+$black: #000000;
+$gray: #e3e9e9;
+$gray-2: #cddbdf;
+
+///////////////////////////////////////////////////////////////////////////////
+///  edit bootstrap                                                         ///
+///////////////////////////////////////////////////////////////////////////////
+
+// Fonts
+$font-size-base: 0.875rem; //14px
+
+// Colors
+$body-bg: $gray;
+$body-color: $secondary-color;
+$input-bg: $white;
+
+$theme-colors: (
+  "primary": $primary-color,
+  "secondary": $secondary-color,
+);
+
+// Radius
+$border-radius: 0.125rem;
+
+// Buttons
+$btn-border-radius: $border-radius;
+
+.btn.btn-primary {
+  color: $white; ///NOTE: color-contrast equal black for the current primary
+}

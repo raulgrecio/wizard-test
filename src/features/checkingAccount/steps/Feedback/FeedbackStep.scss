@@ -1,0 +1,35 @@
+@import "../../../../index.scss";
+
+.FeedbackStep {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  width: 100%;
+
+  &-container {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    min-height: 5rem;
+
+    &-content {
+      display: flex;
+      flex: 1;
+      align-items: center;
+      justify-content: center;
+
+      &-message {
+        padding-left: 1rem;
+      }
+
+      svg.success-ok {
+        color: $success;
+      }
+
+      svg.success-ko {
+        color: $danger;
+      }
+    }
+  }
+}

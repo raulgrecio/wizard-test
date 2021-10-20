@@ -1,0 +1,11 @@
+.ProductInformationStep {
+  &__gallery {
+    display: grid;
+    gap: 1rem;
+    row-gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+    margin: 1em auto;
+    padding: 0;
+    max-width: min(100%, 40rem);
+  }
+}

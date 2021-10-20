@@ -1,0 +1,111 @@
+{
+  "components": {
+    "wizard": {
+      "next": "Next",
+      "previous": "Previous",
+      "submit": "Submit"
+    },
+    "footer": "©Test 2021",
+    "header": {
+      "nav": {
+        "home": "Home",
+        "checking-account": "Checking Account"
+      }
+    }
+  },
+  "screens": {
+    "checking-account": {
+      "components": {
+        "wizard-navigation": {
+          "cancel": "Cancel",
+          "next": "Next",
+          "submit": "Submit",
+          "confirm": "Do you want to abandon the creation of the checking account?",
+          "access": "Access",
+          "back": "Back to Checking Account"
+        }
+      },
+      "form-step": {
+        "title": "Create your OpenClose Checking Account",
+        "paragraph-1": "First, you must create a different password for your electronic belongings.\n You will not be able to recover your password, so remember it well.",
+        "paragraph-2": "You can also create a hint to help you remember your master password.",
+        "form": {
+          "confirm-password": {
+            "input": "Repeat password",
+            "label": "Repeat your Master Password",
+            "placeholder": "Repeat your password"
+          },
+          "hint-password": {
+            "input": "Hint password",
+            "label": "Create your hint to remember your password (optional)",
+            "placeholder": "Enter your hint"
+          },
+          "password": {
+            "input": "Password",
+            "label": "Create your Master Password",
+            "placeholder": "Enter your password"
+          }
+        }
+      },
+      "product-information-step": {
+        "title": "Create your OpenClose Checking Account",
+        "graph1": {
+          "alt": "graph1",
+          "fig-caption": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ligula erat, bibendum in erat blandit, placerat faucibus lacus. Ut efficitur pretium nibh ac molestie."
+        },
+        "graph2": {
+          "alt": "graph2",
+          "fig-caption": "Suspendisse luctus nec urna non congue. Etiam iaculis vel tellus ut posuere."
+        },
+        "section1": {
+          "title": "Nulla lacinia",
+          "description": "Morbi eget bibendum risus. Aliquam sodales erat id elementum rhoncus. Nulla eget posuere augue, sit amet posuere nunc. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce quis dignissim nulla, eget pulvinar sem"
+        },
+        "section2": {
+          "title": "Curabitur nulla magna",
+          "description": "Vestibulum eu dui eget lacus efficitur volutpat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce ullamcorper euismod erat eget consectetur. Ut nunc purus, finibus id porta quis, interdum in ipsum."
+        },
+        "form": {
+          "accept-terms": {
+            "input": "Accept terms",
+            "label": "I affirm that I have read and accept the previous legal information for contracting and I have read the basic information on data protection."
+          },
+          "mayor-age": {
+            "input": "Mayor age",
+            "label": "I affirm that I am of legal age"
+          }
+        }
+      },
+      "feedback-step": {
+        "ok": {
+          "title": "Your OpenClose checking account is already created",
+          "message": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        },
+        "ko": {
+          "title": "An error has occurred",
+          "message": "We were unable to create your OpenClose checking account. Try again later."
+        }
+      }
+    },
+    "home": {
+      "welcome": "Welcome to Checking Account",
+      "paragraph-1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ligula erat, bibendum in erat blandit, placerat faucibus lacus. Ut efficitur pretium nibh ac molestie.",
+      "button": "Start"
+    }
+  },
+  "validations": {
+    "common": {
+      "matches": {
+        "lowercase": "Must Contain One lowercase",
+        "number": "Must Contain One number",
+        "uppercase": "Must Contain One uppercase"
+      }
+    },
+    "confirm-password": {
+      "one-of": "Confirm password should match the password"
+    },
+    "hint-password": {
+      "not-one-of": "Hint Password Should different from password"
+    }
+  }
+}

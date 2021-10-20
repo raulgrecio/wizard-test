@@ -1,0 +1,11 @@
+@import "../../../index.scss";
+
+.BasicNavigation {
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid $black;
+
+  .btn.btn-primary {
+    color: color-contrast($primary);
+  }
+}

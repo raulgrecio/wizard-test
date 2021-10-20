@@ -1,0 +1,11 @@
+@import "../../styles/base";
+
+.Button {
+  &-with-icon {
+    &::before {
+      content: " ";
+      word-spacing: calc(16px - 0.25em);
+      padding-right: calc(16px - 0.25em);
+    }
+  }
+}

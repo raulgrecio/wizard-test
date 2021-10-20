@@ -1,0 +1,18 @@
+@import "../../styles/base";
+
+.Title {
+  position: relative;
+  margin-bottom: 3rem;
+
+  &::after {
+    display: block;
+    content: "";
+    width: 1.775rem;
+    height: 2px;
+    background: $secondary-color-alt;
+    position: absolute;
+    bottom: -0.575rem;
+    left: 0;
+    border-radius: 2px;
+  }
+}

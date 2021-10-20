@@ -1,0 +1,11 @@
+.Article {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  text-align: center;
+
+  &-content {
+    height: 10rem;
+    padding-bottom: 1rem;
+  }
+}

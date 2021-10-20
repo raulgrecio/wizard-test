@@ -1,0 +1,62 @@
+@import "../../../../index.scss";
+
+.Header {
+  height: 50px;
+  background-color: $primary-color;
+  background-image: linear-gradient(
+    315deg,
+    $primary-color-alt 64%,
+    $primary-color 100%
+  );
+  padding: 1em;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  .svg {
+    height: 30px;
+    width: 30px;
+    margin-left: 1rem;
+
+    .st0 {
+      fill: $white;
+    }
+  }
+
+  &-container {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    &-links {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      .nav-link {
+        color: $white;
+        font-weight: bold;
+        text-decoration: none;
+
+        &:hover {
+          color: $white;
+          opacity: 0.8;
+          outline-color: transparent;
+          outline-width: 0;
+        }
+        &:focus {
+          color: $white;
+          outline-color: transparent;
+          outline-width: 0;
+        }
+        &:active,
+        &:target {
+          color: $white;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,69 @@
+@import "../../../../index.scss";
+
+$activated: rgb(31, 31, 31);
+$not-activated: rgb(175, 175, 175);
+$completed: $primary-color;
+
+.WizardProgress {
+  background-color: $gray-2;
+  box-shadow: inset 0px -0.625rem 0.25rem -0.625rem rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+
+  &-container {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+
+    &-step {
+      display: flex;
+      align-items: center;
+
+      > div.step {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 1.625rem;
+        height: 1.625rem;
+        font-size: 87%;
+        border-radius: 50%;
+        background: $not-activated;
+        color: $white;
+
+        &.activated {
+          background-color: $activated;
+          width: 2rem;
+          height: 2rem;
+          position: relative;
+
+          &::after {
+            content: "\00a0";
+            top: 120%;
+            right: 5px;
+            margin-top: 0;
+            position: absolute;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-bottom: 10px solid $white;
+            width: 0;
+            height: 0;
+            filter: drop-shadow(0 0px 2px rgba(0, 0, 0, 0.2));
+          }
+        }
+
+        &.completed {
+          background-color: $completed;
+        }
+      }
+
+      > div.line {
+        min-width: 2rem;
+        height: 2px;
+        background-color: $not-activated;
+
+        &.completed {
+          background-color: $completed;
+        }
+      }
+    }
+  }
+}

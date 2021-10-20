@@ -1,0 +1,10 @@
+@import "../../../../index.scss";
+
+.Footer {
+  height: 4rem;
+  background-color: rgba($white, 30%);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
