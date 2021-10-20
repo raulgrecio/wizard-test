@@ -1,46 +1,47 @@
-# Getting Started with Create React App
+# Wizard test app
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Code test for Web. With **Typecript**, **Redux**, **Sagas**, **Redux-Toolkit**, **react-hook-form** and **react-router-dom** as core technologies for ReactJS
 
-## Available Scripts
+This project was bootstrapped with Create React App. For more information see the [next section](./more_info/CREATE_REACT_APP.md)
 
-In the project directory, you can run:
+---
 
-### `yarn start`
+## Project Info
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+> - ReactJS
+> - Sass
+> - Typescript
+> - Pattern
+> - Redux, sagas, redux-toolkit, Jest
+> - other libs and helpers
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+for more information see: [archivo.md](./more_info/archivo.md)
 
-### `yarn test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Installation prerequisites
 
-### `yarn build`
+- The latest LTS version of [NodeJS](https://nodejs.org/es/) must be installed
+- NodeJS package [yarn](https://yarnpkg.com/) must be installed.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Install dependencies:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
+$ yarn
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+to start the app, execute
 
-### `yarn eject`
+```
+$ yarn start
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+to start the test, execute
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```
+$ yarn test
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+The rest of the scripts can be seen in `package.json` that are destined for development
