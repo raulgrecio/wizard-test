@@ -21,6 +21,13 @@ const checkingAccountFormSlice = createSlice({
     changeHintPassword: (state, action) => {
       state.hintPassword = action.payload;
     },
+    resetForm: (state) => {
+      state.acceptTerms = initialState.acceptTerms;
+      state.confirmPassword = initialState.confirmPassword;
+      state.hintPassword = initialState.hintPassword;
+      state.mayorAge = initialState.mayorAge;
+      state.password = initialState.password;
+    },
   },
 });
 
@@ -32,4 +39,5 @@ export const {
   changePassword,
   changeConfirmPassword,
   changeHintPassword,
+  resetForm,
 } = checkingAccountFormSlice.actions;

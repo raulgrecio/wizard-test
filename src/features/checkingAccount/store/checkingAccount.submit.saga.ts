@@ -1,4 +1,4 @@
-import { call, put, takeLatest, all, select } from "redux-saga/effects";
+import { call, put, takeLatest, select } from "redux-saga/effects";
 
 import { submitForm } from "../../../core/services/api";
 import {
@@ -6,6 +6,7 @@ import {
   responseSuccessed,
   responseFailed,
 } from "./checkingAccount.submit.slice";
+import { resetForm } from "./checkingAccount.form.slice";
 import {
   getPassword,
   getConfirmPassword,
@@ -40,6 +41,8 @@ function* postCheckingSaga() {
         error?.status ?? error
       );
     }
+  } finally {
+    yield put(resetForm());
   }
 }
 
