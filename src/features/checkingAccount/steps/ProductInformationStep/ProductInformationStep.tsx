@@ -31,7 +31,9 @@ import {
 import "./ProductInformationStep.scss";
 
 export const ProductInformationStep = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation("", {
+    keyPrefix: "screens.checking-account.product-information-step",
+  });
   const history = useHistory();
   const dispatch = useDispatch();
   const { increment } = useWizardContext();
@@ -41,29 +43,15 @@ export const ProductInformationStep = () => {
   const schema = yup
     .object()
     .shape({
-      acceptTerms: yup
-        .boolean()
-        .label(
-          t(
-            "screens.checking-account.product-information-step.form.accept-terms.input"
-          )
-        )
-        .isTrue(),
-      mayorAge: yup
-        .boolean()
-        .label(
-          t(
-            "screens.checking-account.product-information-step.form.mayor-age.input"
-          )
-        )
-        .isTrue(),
+      acceptTerms: yup.boolean().label(t("form.accept-terms.input")).isTrue(),
+      mayorAge: yup.boolean().label(t("form.mayor-age.input")).isTrue(),
     })
     .required();
 
   const {
     register,
     handleSubmit,
-    formState: { errors, isValid, isDirty },
+    formState: { errors, isValid },
   } = useForm<Pick<CheckingAccountState, "acceptTerms" | "mayorAge">>({
     resolver: yupResolver(schema),
     defaultValues: { acceptTerms, mayorAge },
@@ -84,55 +72,33 @@ export const ProductInformationStep = () => {
   return (
     <aside className={"ProductInformationStep"}>
       <InnerContainer>
-        <Title
-          text={t("screens.checking-account.product-information-step.title")}
-        />
+        <Title text={t("title")} />
         <div className={"ProductInformationStep__gallery"}>
-          <Article
-            figCaption={t(
-              "screens.checking-account.product-information-step.graph1.fig-caption"
-            )}
-          >
+          <Article figCaption={t("graph1.fig-caption")}>
             <CheckingAccountGraph1Icon />
           </Article>
-          <Article
-            figCaption={t(
-              "screens.checking-account.product-information-step.graph2.fig-caption"
-            )}
-          >
+          <Article figCaption={t("graph2.fig-caption")}>
             <CheckingAccountGraph2Icon />
           </Article>
         </div>
         <Section
-          title={t(
-            "screens.checking-account.product-information-step.section1.title"
-          )}
-          description={t(
-            "screens.checking-account.product-information-step.section1.description"
-          )}
+          title={t("section1.title")}
+          description={t("section1.description")}
         />
         <Section
-          title={t(
-            "screens.checking-account.product-information-step.section2.title"
-          )}
-          description={t(
-            "screens.checking-account.product-information-step.section2.description"
-          )}
+          title={t("section2.title")}
+          description={t("section2.description")}
         />
 
         <div className={"pt-3"}>
           <form onSubmit={onSubmit}>
             <CheckboxField
-              label={t(
-                "screens.checking-account.product-information-step.form.accept-terms.label"
-              )}
+              label={t("form.accept-terms.label")}
               {...register("acceptTerms")}
               error={errors.acceptTerms}
             />
             <CheckboxField
-              label={t(
-                "screens.checking-account.product-information-step.form.mayor-age.label"
-              )}
+              label={t("form.mayor-age.label")}
               {...register("mayorAge")}
               error={errors.mayorAge}
             />
