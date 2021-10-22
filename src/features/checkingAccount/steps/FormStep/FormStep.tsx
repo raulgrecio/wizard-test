@@ -1,5 +1,4 @@
 import React from "react";
-import { useHistory } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
@@ -28,6 +27,7 @@ import {
 import { CheckingAccountState } from "../../store/checkingAccount.interface";
 import { sendCheckingAccount } from "../../store/checkingAccount.submit.slice";
 import { WizardNavigation } from "../../components";
+import useReset from "../../hooks/useReset";
 
 export interface FormStepProps {
   onSubmit?: VoidFunction;
@@ -35,13 +35,13 @@ export interface FormStepProps {
 
 function FormStep({ onSubmit }: FormStepProps) {
   const { t } = useTranslation();
-  const history = useHistory();
   const dispatch = useDispatch();
   const { increment } = useWizardContext();
 
   const password = useSelector(getPasswordSelector);
   const confirmPassword = useSelector(getConfirmPasswordSelector);
   const hintPassword = useSelector(getHintPasswordSelector);
+  const reset = useReset();
 
   const schema = yup
     .object()
@@ -101,6 +101,8 @@ function FormStep({ onSubmit }: FormStepProps) {
     increment();
   });
 
+  const onCancel = () => reset();
+
   return (
     <aside className={"FormStep"}>
       <InnerContainer>
@@ -150,7 +152,11 @@ function FormStep({ onSubmit }: FormStepProps) {
           />
         </form>
       </InnerContainer>
-      <WizardNavigation onSubmit={onSubmitInternal} disabled={!isValid} />
+      <WizardNavigation
+        onCancel={onCancel}
+        onSubmit={onSubmitInternal}
+        disabled={!isValid}
+      />
     </aside>
   );
 }

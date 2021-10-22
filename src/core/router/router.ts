@@ -8,7 +8,7 @@ const baseRoutes: BaseRoutes = {
   checking: "/checking-account",
 };
 
-interface Routes extends BaseRoutes {}
+export interface Routes extends BaseRoutes {}
 
 export const routes: Routes = {
   ...baseRoutes,

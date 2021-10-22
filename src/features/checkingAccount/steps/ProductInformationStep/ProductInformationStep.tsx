@@ -1,12 +1,10 @@
 import React from "react";
-import { useHistory } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
 
-import { routes } from "../../../../core/router";
 import {
   Article,
   CheckboxField,
@@ -27,6 +25,7 @@ import {
   changeAcceptTerms,
   changeMayorAge,
 } from "../../store/checkingAccount.form.slice";
+import useReset from "../../hooks/useReset";
 
 import "./ProductInformationStep.scss";
 
@@ -34,11 +33,11 @@ export const ProductInformationStep = () => {
   const { t } = useTranslation("", {
     keyPrefix: "screens.checking-account.product-information-step",
   });
-  const history = useHistory();
   const dispatch = useDispatch();
   const { increment } = useWizardContext();
   const acceptTerms = useSelector(getAcceptTermsSelector);
   const mayorAge = useSelector(getMayorAgeSelector);
+  const reset = useReset({ confirm: true });
 
   const schema = yup
     .object()
@@ -65,9 +64,7 @@ export const ProductInformationStep = () => {
     increment();
   });
 
-  const onCancel = () => {
-    history.push(routes.root);
-  };
+  const onCancel = () => reset();
 
   return (
     <aside className={"ProductInformationStep"}>
