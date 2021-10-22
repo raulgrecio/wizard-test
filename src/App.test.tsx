@@ -8,7 +8,7 @@ import App from "./App";
 //   Trans: ({ children }: any) => children,
 // }));
 
-test("renders learn react link", () => {
+test("renders app", () => {
   render(<App />);
   const linkElement = screen.getByText(/welcome/i);
   expect(linkElement).toBeInTheDocument();
