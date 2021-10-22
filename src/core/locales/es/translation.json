@@ -1,15 +1,15 @@
 {
   "components": {
     "wizard": {
-      "next": "Next",
-      "previous": "Previous",
-      "submit": "Submit"
+      "next": "Siguiente",
+      "previous": "Anterior",
+      "submit": "Enviar"
     },
-    "footer": "©Test 2021",
+    "footer": "©Prueba 2021",
     "header": {
       "nav": {
-        "home": "Home",
-        "checking-account": "Checking Account"
+        "home": "Inicio",
+        "checking-account": "Cuenta corriente"
       }
     }
   },
@@ -17,23 +17,23 @@
     "checking-account": {
       "components": {
         "wizard-navigation": {
-          "cancel": "Cancel",
-          "next": "Next",
-          "submit": "Submit",
-          "confirm": "Do you want to abandon the creation of the checking account?",
-          "access": "Access",
-          "back": "Back to Checking Account"
+          "cancel": "Cancelar",
+          "next": "Siguiente",
+          "submit": "Enviar",
+          "confirm": "¿Quieres abandonar la creación de la cuenta corriente?",
+          "access": "Acceso",
+          "back": "Volver a Cuenta corriente"
         }
       },
       "form-step": {
-        "title": "Create your OpenClose Checking Account",
-        "paragraph-1": "First, you must create a different password for your electronic belongings.\n You will not be able to recover your password, so remember it well.",
-        "paragraph-2": "You can also create a hint to help you remember your master password.",
+        "title": "Cree su Cuenta Corriente OpenClose",
+        "paragraph-1": "Primero, debe crear una contraseña diferente de sus pertenencias electrónicas.\n No podrás recuperar tu contraseña, así que recuérdala bien.",
+        "paragraph-2": "También puede crear una sugerencia para ayudarle a recordar su contraseña maestra.",
         "form": {
           "confirm-password": {
-            "input": "Repeat password",
-            "label": "Repeat your Master Password",
-            "placeholder": "Repeat your password"
+            "input": "Repetir contraseña",
+            "label": "Repite su contraseña maestra",
+            "placeholder": "Repita su contraseña"
           },
           "hint-password": {
             "input": "Hint password",
@@ -48,7 +48,7 @@
         }
       },
       "product-information-step": {
-        "title": "Create your OpenClose Checking Account",
+        "title": "Cree su Cuenta Corriente OpenClose",
         "graph1": {
           "alt": "graph1",
           "fig-caption": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ligula erat, bibendum in erat blandit, placerat faucibus lacus. Ut efficitur pretium nibh ac molestie."
@@ -67,45 +67,45 @@
         },
         "form": {
           "accept-terms": {
-            "input": "Accept terms",
-            "label": "I affirm that I have read and accept the previous legal information for contracting and I have read the basic information on data protection."
+            "input": "Accepto terminos",
+            "label": "Afirmo que he leído y acepto la información legal previa para la contratación y he leído la información básica sobre protección de datos."
           },
           "mayor-age": {
-            "input": "Mayor age",
-            "label": "I affirm that I am of legal age"
+            "input": "Mayor edad",
+            "label": "Afirmo que soy mayor de edad"
           }
         }
       },
       "feedback-step": {
         "ok": {
-          "title": "Your OpenClose checking account is already created",
+          "title": "Su cuenta corriente OpenClose ya está creada",
           "message": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
         },
         "ko": {
-          "title": "An error has occurred",
-          "message": "We were unable to create your OpenClose checking account. Try again later."
+          "title": "Se ha producido un error",
+          "message": "No pudimos crear su cuenta corriente OpenClose. Vuelve a intentarlo más tarde."
         }
       }
     },
     "home": {
-      "welcome": "Welcome to Checking Account",
+      "welcome": "Bienvenido a la cuenta corriente",
       "paragraph-1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ligula erat, bibendum in erat blandit, placerat faucibus lacus. Ut efficitur pretium nibh ac molestie.",
-      "button": "Start"
+      "button": "Comenzar"
     }
   },
   "validations": {
     "common": {
       "matches": {
-        "lowercase": "Must Contain One lowercase",
-        "number": "Must Contain One number",
-        "uppercase": "Must Contain One uppercase"
+        "lowercase": "Debe contener una minúscula",
+        "number": "Debe contener un número",
+        "uppercase": "Debe contener una mayúscula"
       }
     },
     "confirm-password": {
-      "one-of": "Confirm password should match the password"
+      "one-of": "Repetir contraseña debe coincidir con la contraseña"
     },
     "hint-password": {
-      "not-one-of": "Hint Password Should different from password"
+      "not-one-of": "Sugerencia La contraseña debe ser diferente de la contraseña"
     }
   }
 }
